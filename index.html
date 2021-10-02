@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Car Racing</title>
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+
+<body>
+
+    <section id="page1" class="fscreen">
+        <div class="main">
+            <img src="/img/Main.png" alt="" srcset="" onclick="game.init1()">
+        </div>
+    </section>
+
+    <section id="page2" class="fscreen" style="display:none">
+        <div class="container">
+            <div class="selCar">
+                <div id="1" onclick="game.choose1(1)" class="carContainer">
+                    <img src="/img/AstonMartin.png" alt="">
+                    <div class="stat">
+                        <div class="ms">Max Speed<progress max="10" value="7"></progress>
+                        </div>
+                        <div class="ac">Acceleration<progress max="10" value="5"></progress>
+                        </div>
+                        <div class="st">Stability<progress max="10" value="4"></progress>
+                        </div>
+                    </div>
+                </div>
+                <div id="2" onclick="game.choose1(2)" class="carContainer">
+                    <img src="/img/AudiS4.png" alt="">
+                    <div class="stat">
+                        <div class="ms">Max Speed<progress max="10" value="5"></progress>
+                        </div>
+                        <div class="ac">Acceleration<progress max="10" value="3"></progress>
+                        </div>
+                        <div class="st">Stability<progress max="10" value="8"></progress>
+                        </div>
+                    </div>
+                </div>
+                <div id="3" onclick="game.choose1(3)" class="carContainer">
+                    <img src="/img/Mclaren.png" alt="">
+                    <div class="stat">
+                        <div class="ms">Max Speed<progress max="10" value="8"></progress>
+                        </div>
+                        <div class="ac">Acceleration<progress max="10" value="5"></progress>
+                        </div>
+                        <div class="st">Stability<progress max="10" value="3"></progress>
+                        </div>
+                    </div>
+                </div>
+                <div id="4" onclick="game.choose1(4)" class="carContainer">
+                    <img src="/img/Prototype.png" alt="">
+                    <div class="stat">
+                        <div class="ms">Max Speed<progress max="10" value="8"></progress>
+                        </div>
+                        <div class="ac">Acceleration<progress max="10" value="6"></progress>
+                        </div>
+                        <div class="st">Stability<progress max="10" value="2"></progress>
+                        </div>
+                    </div>
+                </div>
+            </div>    
+            <div class="selCar">
+                <div id="5" onclick="game.choose1(5)" class="carContainer">
+                    <img src="/img/BMW.png" alt="">
+                    <div class="stat">
+                        <div class="ms">Max Speed<progress max="10" value="6"></progress>
+                        </div>
+                        <div class="ac">Acceleration<progress max="10" value="4"></progress>
+                        </div>
+                        <div class="st">Stability<progress max="10" value="7"></progress>
+                        </div>
+                    </div>
+                </div>
+                <div id="6" onclick="game.choose1(6)" class="carContainer">
+                    <img src="/img/mustang.png" alt="">
+                    <div class="stat">
+                        <div class="ms">Max Speed<progress max="10" value="6"></progress>
+                        </div>
+                        <div class="ac">Acceleration<progress max="10" value="4"></progress>
+                        </div>
+                        <div class="st">Stability<progress max="10" value="6"></progress>
+                        </div>
+                    </div>
+                </div>
+                <div id="7" onclick="game.choose1(7)" class="carContainer">
+                    <img src="/img/Porsche962.png" alt="">
+                    <div class="stat">
+                        <div class="ms">Max Speed<progress max="10" value="7"></progress>
+                        </div>
+                        <div class="ac">Acceleration<progress max="10" value="5"></progress>
+                        </div>
+                        <div class="st">Stability<progress max="10" value="3"></progress>
+                        </div>
+                    </div>
+                </div>
+                <div id="8" onclick="game.choose1(8)" class="carContainer">
+                    <img src="/img/Porsche993.png" alt="">
+                    <div class="stat">
+                        <div class="ms">Max Speed<progress max="10" value="6"></progress>
+                        </div>
+                        <div class="ac">Acceleration<progress max="10" value="6"></progress>
+                        </div>
+                        <div class="st">Stability<progress max="10" value="4"></progress>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="playerCars">
+                <div id="p1Cars"><h3 id="pl1">PLAYER 1</h3>
+                    <div class="carsAmount">
+                        <div class="carsStat"></div>
+                        <div class="car" id="psel0"></div>
+                        <div class="car" id="psel1"></div>
+                    </div>
+                </div>
+                <div id="p2Cars"><h3 id="pl2">PLAYER 2</h3>
+                    <div class="carsAmount">
+                        <div class="carsStat"></div>
+                        <div class="car" id="psel2"></div>
+                        <div class="car" id="psel3"></div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <section id="page3" class="fscreen"style="display:none">
+
+    </section>
+
+    <section id="page4" class="fscreen"style="display:none">
+
+    </section>
+
+    <section id="page5" class="fscreen"style="display:none">
+
+    </section>
+
+    <script src="/js/main.js"></script>
+</body>
+
+</html>
