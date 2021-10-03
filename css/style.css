@@ -5,6 +5,9 @@ body {
 h3 {
     text-align: center;
 }
+td {
+    width: 100px;
+}
 
 .fscreen {
     justify-content: center;
@@ -21,7 +24,7 @@ h3 {
     position: absolute; 
     top: 50%; 
     left: 50%;
-    background-color: blueviolet;
+    /* background-color: blueviolet; */
 }
 .selCar {
     display: flex;
@@ -30,7 +33,7 @@ h3 {
     align-content: center;
     align-items: center;
     width: 100%;
-    background-color: beige;
+    /* background-color: beige; */
 }
 .carContainer, .graySelected {
     position: relative;
@@ -59,17 +62,8 @@ h3 {
 .sscreen {
     cursor: pointer;
 }
-#page1 {
+#page1, #page2, #page3, #page4, #page5 {
     background-color: aquamarine;
-}
-#page2 {
-    background-color: lightblue;
-}
-#page3 {
-    background-color: lightseagreen;
-}
-#page4 {
-    background-color: lightcoral;
 }
 
 .stat {
@@ -117,4 +111,47 @@ progress {
 .preimg {
     height: 200px;
     width: 350px;
+}
+.racing {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+.race {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.race img {
+    height: 100px;
+    width: 150px;
+}
+.pRacing {
+    display: flex;
+    justify-content: center;
+    /* align-content: space-between; */
+}
+.plRace {
+    margin: 10px auto;
+}
+.raceimg {
+    height: 200px;
+    width: 300px;
+    margin: auto;
+}
+#wheel {
+    display: block;
+    height: 100px;
+    width: 100px;
+    margin: 10px auto;
+    transition: transform 1s ease;
+}
+#wheel:hover {
+    transform: rotate(360deg);
+}
+.restart button {
+    width: 100px;
+    height: 50px;
+    margin-top: 100px;
+    background-color: burlywood;
 }
