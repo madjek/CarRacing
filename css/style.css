@@ -54,6 +54,16 @@ td {
     justify-content: center;
     align-items: center;
 }
+.carWiner {
+    position: relative;
+    height: 200px;
+    width: 300px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 5px solid green;
+
+}
 
 .carContainer:hover .stat {
     display: block;

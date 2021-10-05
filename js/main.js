@@ -66,11 +66,11 @@ let game = {
             document.getElementById("pl2").style.color = 'red';
         }
 
-        if (this.team.length == 2) {
-            setTimeout(() => {
-                alert("PLAYER 2 CHOSE YOUR CARS")
-            }, 200);
-        }
+        // if (this.team.length == 2) {
+        //     setTimeout(() => {
+        //         alert("PLAYER 2 CHOSE YOUR CARS")
+        //     }, 200);
+        // }
         if (this.team.length == 4) {
             setTimeout(() => {
                 game.init2()
@@ -80,9 +80,9 @@ let game = {
 
     init1() {
         this.organizer("page2");
-        setTimeout(() => {
-            alert("PLAYER 1 CHOSE YOUR CARS")
-        }, 200);
+        // setTimeout(() => {
+        //     alert("PLAYER 1 CHOSE YOUR CARS")
+        // }, 200);
 
     },
     init2() {
@@ -106,14 +106,14 @@ let game = {
 
         setTimeout(() => {
             game.init3()
-        }, 3000);
+        }, 1000);
     },
 
     init3() {
         this.organizer("page4");
-        setTimeout(() => {
-            alert("Click the wheel to start")
-        }, 200);
+        // setTimeout(() => {
+        //     alert("Click the wheel to start")
+        // }, 200);
 
         let race = document.getElementById("page4");
         race.innerHTML = `
@@ -130,10 +130,10 @@ let game = {
                         <table>
                             <tr>
                             <td>Lap1: <span id="lap0"></span></td>
-                            <td>Lap2: <span id="lap4"></span></td>
-                            <td>Lap3: <span id="lap8"></span></td>
-                            <td>Lap4: <span id="lap12"></span></td>
-                            <td>Lap5: <span id="lap16"></span></td>
+                            <td>Lap2: <span id="lap1"></span></td>
+                            <td>Lap3: <span id="lap2"></span></td>
+                            <td>Lap4: <span id="lap3"></span></td>
+                            <td>Lap5: <span id="lap4"></span></td>
                             </tr>
                         </table>
                     </div>
@@ -141,11 +141,11 @@ let game = {
                         <p>${this.team[2].name}</p>
                         <table>
                             <tr>
-                            <td>Lap1: <span id="lap1"></span></td>
-                            <td>Lap2: <span id="lap5"></span></td>
-                            <td>Lap3: <span id="lap9"></span></td>
+                            <td>Lap1: <span id="lap10"></span></td>
+                            <td>Lap2: <span id="lap11"></span></td>
+                            <td>Lap3: <span id="lap12"></span></td>
                             <td>Lap4: <span id="lap13"></span></td>
-                            <td>Lap5: <span id="lap17"></span></td>
+                            <td>Lap5: <span id="lap14"></span></td>
                             </tr>
                         </table>
                     </div>
@@ -162,11 +162,11 @@ let game = {
                         <p>${this.team[1].name}</p>
                         <table>
                             <tr>
-                            <td>Lap1: <span id="lap2"></span></td>
+                            <td>Lap1: <span id="lap5"></span></td>
                             <td>Lap2: <span id="lap6"></span></td>
-                            <td>Lap3: <span id="lap10"></span></td>
-                            <td>Lap4: <span id="lap14"></span></td>
-                            <td>Lap5: <span id="lap18"></span></td>
+                            <td>Lap3: <span id="lap7"></span></td>
+                            <td>Lap4: <span id="lap8"></span></td>
+                            <td>Lap5: <span id="lap9"></span></td>
                             </tr>
                         </table>
                     </div>
@@ -174,10 +174,10 @@ let game = {
                         <p>${this.team[3].name}</p>
                         <table>
                             <tr>
-                            <td>Lap1: <span id="lap3"></span></td>
-                            <td>Lap2: <span id="lap7"></span></td>
-                            <td>Lap3: <span id="lap11"></span></td>
-                            <td>Lap4: <span id="lap15"></span></td>
+                            <td>Lap1: <span id="lap15"></span></td>
+                            <td>Lap2: <span id="lap16"></span></td>
+                            <td>Lap3: <span id="lap17"></span></td>
+                            <td>Lap4: <span id="lap18"></span></td>
                             <td>Lap5: <span id="lap19"></span></td>
                             </tr>
                         </table>
@@ -208,11 +208,26 @@ let game = {
             document.getElementById(ch).style.display = "none";
         }
     }, 
+    // organizer(round) {
+    //     let around = ["round1", "round2"];
+
+    //     around = around.filter(val => !round.includes(val));
+
+    //     document.getElementById(round).style.display = "block";
+
+    //     for (let ch of around) {
+    //         document.getElementById(ch).style.display = "none";
+    //     }
+    // }, 
 
     raceLap() {
-        let lapResult = [];
+        let lapResult = []
         let team1Res = []
         let team2Res = []
+        let p1c1 = []
+        let p1c2 = []
+        let p2c1 = []
+        let p2c2 = []
 
         for (let l = 0; l < 5; l++) {
             for (let c = 0; c <= 3; c++) {
@@ -222,7 +237,7 @@ let game = {
         }
 
         for (let r1 = 0; r1 < 20; r1++) {
-            document.getElementById("lap" + r1).innerHTML = time(lapResult[r1]);
+            // document.getElementById("lap" + r1).innerHTML = time(lapResult[r1]);
 
             if (r1 % 2 == 0) {
                 team1Res.push(lapResult[r1])
@@ -233,7 +248,89 @@ let game = {
         console.log(team1Res.reduce((a, b) => a + b))
         console.log(team2Res.reduce((a, b) => a + b))
 
-        let res = document.getElementById("page5");
+        // console.log(lapResult)
+
+        // console.log(team1Res)
+        // console.log(team2Res)
+
+        // console.log(p1c1)
+        // console.log(p1c2)
+
+        for (let p1car = 0; p1car < 10; p1car++) {
+            if (p1car % 2 == 0) {
+                p1c1.push(team1Res[p1car])
+                for (let c1 = 0; c1 < 5; c1++) {
+                    setTimeout(function() {
+                        document.getElementById("lap" + c1).innerHTML = time(p1c1[c1]);
+                    }, 500 * c1);
+                }
+            } else {
+                setTimeout(() => {
+                    p1c2.push(team1Res[p1car])
+                    for (let c2 = 0; c2 < 5; c2++) {
+                        setTimeout(function() {
+                        document.getElementById("lap" + (c2 + 5)).innerHTML = time(p1c2[c2]);
+                    }, 500 * c2);
+                    } 
+                }, 3000);
+            }
+        }
+
+        console.log(p2c1)
+        console.log(p2c2)
+        
+        for (let p2car = 0; p2car < 10; p2car++) {
+            if (p2car % 2 == 0) {
+                p2c1.push(team2Res[p2car])
+                for (let c3 = 0; c3 < 5; c3++) {
+                    setTimeout(function() {
+                document.getElementById("lap" + (c3 + 10)).innerHTML = time(p2c1[c3]);
+            }, 500 * c3);
+                }
+            } else {
+                setTimeout(() => {
+                    p2c2.push(team2Res[p2car])
+                    for (let c4 = 0; c4 < 5; c4++) {
+                        setTimeout(function() {
+                        document.getElementById("lap" + (c4 + 15)).innerHTML = time(p2c2[c4]);
+                    }, 500 * c4);
+                    }
+                }, 3000);
+
+            }
+        }
+
+    //    for (let q = 0; q < 5; q++) {
+    //         if (p1c1 < p2c1) {
+    //             document.getElementsByTagName("span").style.color = 'red';
+    //         } else {
+                
+    //         }           
+    //    }
+
+
+
+        // for (let c1 = 0; c1 <= 4; c1++) {
+        //     document.getElementById("lap" + c1).innerHTML = time(lapResult[c1]);
+        // }
+        // for (let c2 = 5; c2 <= 9; c2++) {
+        //     document.getElementById("lap" + c2).innerHTML = time(lapResult[c2]);
+        // }
+        // for (let c3 = 0; c3 <= 4; c3++) {
+        //     document.getElementById("lap" + c3).innerHTML = time(lapResult[c3]);
+        // }
+        // for (let c4 = 5; c4 <= 9; c4++) {
+        //     document.getElementById("lap" + c4).innerHTML = time(lapResult[c4]);
+        // }
+
+        if (p1c1.reduce((a, b) => a + b) < p2c1.reduce((a, b) => a + b)) {
+            this.p1c1.style= "background-color: green";
+        } else {
+            this.p2c1.style= "background-color: green"
+        }
+        console.log(p1c1.reduce((a, b) => a + b))
+
+        // let res = document.getElementById("page5");
     
         if (team1Res.reduce((a, b) => a + b) < team2Res.reduce((a, b) => a + b)) {
         res.innerHTML = `
@@ -263,6 +360,6 @@ let game = {
 
         setTimeout(() => {
             game.init4()
-        }, 5000);
+        }, 10000);
     },
 }
