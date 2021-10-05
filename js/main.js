@@ -1,3 +1,6 @@
+/* Author: Yevhenii Madzhar */
+/* Version: 1.0 */
+
 class Car {
     constructor(name, maxSpeed, acceleration, stability, weight, imn) {
         this.name = name,
@@ -226,11 +229,6 @@ let game = {
             } else {
                 team2Res.push(lapResult[r1])
             }
-            // if (team1Res[r1] < team2Res[r1]) {
-            //     document.getElementById("lap" + r1).style.color = "red"; 
-            // } else {
-            //     // document.getElementById("lap" + r1).style.color = "red";
-            // }
         }
         console.log(team1Res.reduce((a, b) => a + b))
         console.log(team2Res.reduce((a, b) => a + b))
@@ -267,4 +265,4 @@ let game = {
             game.init4()
         }, 5000);
     },
-};
+}
