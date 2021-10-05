@@ -66,6 +66,13 @@ td {
     background-color: aquamarine;
 }
 
+/* #page4 {
+
+background-image: linear-gradient(rgba(255,255,255,0.9), rgba(255,255,255,0.9)), url("/img/race.gif");background-size: 100%;
+transition: background 0.2s ease;
+} */
+
+
 .stat {
     display: none;
     width: 100%;

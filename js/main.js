@@ -66,7 +66,7 @@ let game = {
         if (this.team.length == 2) {
             setTimeout(() => {
                 alert("PLAYER 2 CHOSE YOUR CARS")
-            }, 300);
+            }, 200);
         }
         if (this.team.length == 4) {
             setTimeout(() => {
@@ -79,7 +79,7 @@ let game = {
         this.organizer("page2");
         setTimeout(() => {
             alert("PLAYER 1 CHOSE YOUR CARS")
-        }, 300);
+        }, 200);
 
     },
     init2() {
@@ -90,28 +90,27 @@ let game = {
         <div class="preview">
         <h2>ROUND 1</h2><br>
             <div class="preround">
-                <img class="preimg" src="/img/${this.team[0].imn}.png" alt="${this.team[0].imn}">VS   
-                <img class="preimg" src="/img/${this.team[2].imn}.png" alt="${this.team[2].imn}">
+                <img class="preimg" src="img/${this.team[0].imn}.png" alt="${this.team[0].imn}">VS   
+                <img class="preimg" src="img/${this.team[2].imn}.png" alt="${this.team[2].imn}">
             </div>
             <br>
         <h2>ROUND 2</h2><br>
             <div class="preround">
-                <img class="preimg" src="/img/${this.team[1].imn}.png" alt="${this.team[1].imn}">VS   
-                <img class="preimg" src="/img/${this.team[3].imn}.png" alt="${this.team[3].imn}">
+                <img class="preimg" src="img/${this.team[1].imn}.png" alt="${this.team[1].imn}">VS   
+                <img class="preimg" src="img/${this.team[3].imn}.png" alt="${this.team[3].imn}">
             </div>
         </div>`
 
         setTimeout(() => {
             game.init3()
         }, 3000);
-
     },
 
     init3() {
         this.organizer("page4");
         setTimeout(() => {
             alert("Click the wheel to start")
-        }, 300);
+        }, 200);
 
         let race = document.getElementById("page4");
         race.innerHTML = `
@@ -119,8 +118,8 @@ let game = {
             <div id="round1">
                 <h2>ROUND 1</h2><br>
                 <div class="race">
-                    <img class="raceimg" src="/img/${this.team[0].imn}.png" alt="${this.team[0].imn}">VS 
-                    <img class="raceimg" src="/img/${this.team[2].imn}.png" alt="${this.team[2].imn}">
+                    <img class="raceimg" src="img/${this.team[0].imn}.png" alt="${this.team[0].imn}">VS 
+                    <img class="raceimg" src="img/${this.team[2].imn}.png" alt="${this.team[2].imn}">
                 </div>
                 <div class="pRacing">
                     <div class="plRace">
@@ -152,8 +151,8 @@ let game = {
             <div id="round2">
             <h2>ROUND 2</h2><br>
                 <div class="race">
-                    <img class="raceimg" src="/img/${this.team[1].imn}.png" alt="${this.team[1].imn}">VS 
-                    <img class="raceimg" src="/img/${this.team[3].imn}.png" alt="${this.team[3].imn}">
+                    <img class="raceimg" src="img/${this.team[1].imn}.png" alt="${this.team[1].imn}">VS 
+                    <img class="raceimg" src="img/${this.team[3].imn}.png" alt="${this.team[3].imn}">
                 </div>    
                 <div class="pRacing">
                     <div class="plRace">
@@ -183,13 +182,12 @@ let game = {
                 </div>
             </div>  
         </div>  
-        <img id="wheel" src="/img/wheel.png" alt="Wheel" onclick="game.raceLap()">     
+        <img id="wheel" src="img/wheel.png" alt="Wheel" onclick="game.raceLap()">     
         </div>`
     },
 
     init4() {
         this.organizer("page5");
-
     },
 
     init5() {
@@ -197,7 +195,6 @@ let game = {
     },
 
     organizer(pages) {
-
         let arrPages = ["page1", "page2", "page3", "page4", "page5"];
 
         arrPages = arrPages.filter(val => !pages.includes(val));
@@ -229,6 +226,11 @@ let game = {
             } else {
                 team2Res.push(lapResult[r1])
             }
+            // if (team1Res[r1] < team2Res[r1]) {
+            //     document.getElementById("lap" + r1).style.color = "red"; 
+            // } else {
+            //     // document.getElementById("lap" + r1).style.color = "red";
+            // }
         }
         console.log(team1Res.reduce((a, b) => a + b))
         console.log(team2Res.reduce((a, b) => a + b))
@@ -240,8 +242,8 @@ let game = {
         <div class="preview">
         <h2>PLAYER 1 WIN</h2><br>
         <div class="preround">
-                <img class="preimg" src="/img/${this.team[0].imn}.png" alt="${this.team[0].imn}">   
-                <img class="preimg" src="/img/${this.team[1].imn}.png" alt="${this.team[1].imn}">
+                <img class="preimg" src="img/${this.team[0].imn}.png" alt="${this.team[0].imn}">   
+                <img class="preimg" src="img/${this.team[1].imn}.png" alt="${this.team[1].imn}">
             </div>
             <div class="restart">
             <button onclick="game.init5()">New Game</button>
@@ -253,8 +255,8 @@ let game = {
         <div class="preview">
         <h2>PLAYER 2 WIN</h2><br>
             <div class="preround">
-                <img class="preimg" src="/img/${this.team[2].imn}.png" alt="${this.team[2].imn}">   
-                <img class="preimg" src="/img/${this.team[3].imn}.png" alt="${this.team[3].imn}">
+                <img class="preimg" src="img/${this.team[2].imn}.png" alt="${this.team[2].imn}">   
+                <img class="preimg" src="img/${this.team[3].imn}.png" alt="${this.team[3].imn}">
             </div>
             <div class="restart">
             <button onclick="game.init5()">New Game</button>
