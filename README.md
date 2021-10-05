@@ -11,4 +11,4 @@ Results page for each car for each lap:
 ![results](https://user-images.githubusercontent.com/90720831/135977069-7fef91c7-f8d2-444f-a0bf-4caf61722bfa.jpg)
 
 Page with the winning player:
-![win](https://user-images.githubusercontent.com/90720831/135977076-e7904010-d3cd-4407-a7fc-f035bcf9a3a1.jpg)
+![win](https://user-images.githubusercontent.com/90720831/135977917-5ca34189-f2ab-4a85-8af7-924874fb2371.jpg)
